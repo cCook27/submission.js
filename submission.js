@@ -36,7 +36,8 @@ const largestPair = function(array) {
 };
 
 const removeParenth = function(str) {
-  // your code here - don't forget to return a string!
+  str = str.replace(/\((\w{1,}|.{1,})?[\)]/gi, "");
+  return str;
 };
 
 const scoreScrabble = function(str) {
