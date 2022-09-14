@@ -23,7 +23,12 @@ const findFrequency = function(array){
 };
 
 const isPalindrome = function(str) {
-  // your code here - don't forget to return a boolean!
+  str = str.toLowerCase()
+  backwardsArray = []
+  for(let i = str.length; i >= 0; i--){
+    backwardsArray.push(str[i]);
+  }
+  return Boolean(backwardsArray.join('') === str);
 };
 
 const largestPair = function(array) {
