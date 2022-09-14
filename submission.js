@@ -7,8 +7,19 @@ const findSum = function(array) {
   return collector;
 };
 
-const findFrequency = function(array) {
-  // your code here - don't forget to return an object!
+const findFrequency = function(array){
+  
+  let findAmounts = array.reduce(function(accumulator, letter){
+    accumulator[letter] += 1
+    return accumulator;
+  }, {a: 0, b: 0, c: 0, d: 0}
+  );
+  values = Object.values(findAmounts);
+  keys = Object.keys(findAmounts);
+  indexMax = values.indexOf(Math.max(...values));
+  indexMin = values.indexOf(Math.min(...values));
+
+  return result = {most: keys[indexMax], least: keys[indexMin]};
 };
 
 const isPalindrome = function(str) {
