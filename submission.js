@@ -1,5 +1,10 @@
 const findSum = function(array) {
-  // your code here - don't forget to return a number!
+  let collector = 0
+  for (let i = 0; i < array.length; i++) {
+    const element = array[i];
+    collector = collector + element;
+  }
+  return collector;
 };
 
 const findFrequency = function(array) {
