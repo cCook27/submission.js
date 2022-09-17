@@ -7,6 +7,7 @@ const findSum = function(array) {
   return collector;
 };
 
+
 const findFrequency = function(array){
   
   let findAmounts = array.reduce(function(accumulator, letter){
@@ -22,6 +23,8 @@ const findFrequency = function(array){
   return result = {most: keys[indexMax], least: keys[indexMin]};
 };
 
+
+
 const isPalindrome = function(str) {
   str = str.toLowerCase()
   backwardsArray = []
@@ -30,6 +33,8 @@ const isPalindrome = function(str) {
   }
   return Boolean(backwardsArray.join('') === str);
 };
+
+
 
 const largestPair = function(array) {
   products = [];
@@ -40,10 +45,14 @@ const largestPair = function(array) {
   return Math.max(...products);
 };
 
+
+
 const removeParenth = function(str) {
   str = str.replace(/\((\w{1,}|.{1,})?[\)]/gi, "");
   return str;
 };
+
+
 
 const scoreScrabble = function(str) {
 
