@@ -8,18 +8,20 @@ const findSum = function(array) {
 };
 
 
-const findFrequency = function(array){
-  
-  let findAmounts = array.reduce(function(accumulator, letter){
-    accumulator[letter] += 1
-    return accumulator;
-  }, {a: 0, b: 0, c: 0, d: 0}
-  );
-  values = Object.values(findAmounts);
-  keys = Object.keys(findAmounts);
-  indexMax = values.indexOf(Math.max(...values));
-  indexMin = values.indexOf(Math.min(...values));
-
+const findFrequency = function(array){    
+    objOne = {};
+      for (let i = 0; i < array.length; i++) {
+        const element = array[i];
+        objOne[element] = 0;
+      };
+    let findAmounts = array.reduce(function(accumulator, letter){
+      accumulator[letter] += 1
+      return accumulator;
+    }, objOne);
+      values = Object.values(findAmounts);
+      keys = Object.keys(findAmounts);
+      indexMax = values.indexOf(Math.max(...values));
+      indexMin = values.indexOf(Math.min(...values));
   return result = {most: keys[indexMax], least: keys[indexMin]};
 };
 
